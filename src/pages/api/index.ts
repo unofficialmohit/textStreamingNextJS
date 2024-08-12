@@ -6,8 +6,9 @@ export default async function handler(
     if(req.method=='GET')
         {
       try {
+        res.setHeader('Content-Type', 'text/event-stream')
     // const http = require('http');
-WebSocket
+// WebSocket
 const essay = `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit dolor non tempus viverra. Suspendisse convallis tellus eu erat venenatis, sed gravida erat pharetra. Suspendisse vel sollicitudin ex. Aliquam vitae consequat purus. Suspendisse aliquet finibus urna eget tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin congue elementum feugiat. Quisque accumsan posuere arcu at aliquam. Donec iaculis condimentum sem, eu mollis ligula mattis maximus. Sed viverra aliquam arcu, ac suscipit velit suscipit eget. Nulla vel est odio.
 
