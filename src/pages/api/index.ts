@@ -6,7 +6,6 @@ export default async function handler(
     if(req.method=='GET')
         {
       try {
-        res.setHeader('Content-Type', 'text/event-stream')
     // const http = require('http');
 // WebSocket
 const essay = `
@@ -19,6 +18,9 @@ Morbi quis nibh vitae sem congue volutpat at a dui. Nullam ut ex magna. Vestibul
 Vestibulum varius blandit rutrum. Nulla facilisi. Donec fringilla quis nulla at luctus. Fusce vehicula nulla ac sodales sagittis. Pellentesque mauris ante, congue vel erat et, maximus hendrerit nisi. In at accumsan urna, vel vestibulum nibh. Donec malesuada hendrerit egestas. Vestibulum ligula ligula, molestie vel turpis sit amet, accumsan placerat magna. Nunc ut ultricies libero, in ultricies erat. Sed at laoreet justo. Quisque at diam in sem fermentum sollicitudin pharetra et massa. Vivamus laoreet bibendum tortor in efficitur. Donec commodo vestibulum ante, id efficitur eros sodales in. Aliquam erat volutpat. Nullam at luctus sem. Nullam eleifend mollis eros, a venenatis enim pulvinar ac.
 
 Nunc nisl lacus, eleifend at pellentesque eget, vulputate et est. Aliquam vel magna ante. In ante ante, tincidunt ac aliquam eu, efficitur vitae lacus. Nam fringilla urna ut elit maximus, sit amet feugiat velit gravida. Aliquam tincidunt ex eget purus porttitor pretium. Maecenas egestas maximus porttitor. Fusce velit ipsum, eleifend vel lacinia sit amet, porta non est. Praesent id nunc in nisi lacinia scelerisque.`;
+res.setHeader('Content-Type', 'text/event-stream');
+res.setHeader('Cache-Control', 'no-cache');
+res.setHeader('Connection', 'keep-alive');
 
   res.writeHead(200, {
     'Content-Type': 'text/event-stream',
