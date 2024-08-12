@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
 useEffect(()=>{
-  const eventSource = new EventSource('http://localhost:3000/api');
+  const eventSource = new EventSource('https://text-streaming-next-js.vercel.app');
+  //http://localhost:3000/api
 
   eventSource.onmessage = (event) => {
     setData(prev=>`${prev} ${event.data}`)
